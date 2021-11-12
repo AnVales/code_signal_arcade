@@ -6,28 +6,34 @@ array_1 = [1, 2, 1, 2]
 def almostIncreasingSequence(sequence):
 
     counter = 0
-    for idx, val in enumerate(sequence):
-
-        if idx == 0:
-            prev = val
-
-        else:
-            if val > prev:
-                prev = val
-
-            else:
-                counter = counter + 1
-                print('counter', counter)
-                print('val', val)
-                prev = val
-
-        if counter > 1:
+    
+    # If sort
+    if isSorted(sequence):
+        return True
+        
+    # Add to counter
+    for i in range(1,len(sequence)):
+        if sequence[i]<=sequence[i-1]:
+            counter = counter + 1
+        if counter >= 2:
             return False
+            
+    
+    # Check 
+    if i-2 >= 0 and i+1 < len(sequence) and sequence[i] <= sequence[i-2] and sequence[i+1] <= sequence[i-1]:
+        return False 
+    return True
+  
+  
+    # Sort function
+def isSorted(sequence):
+    for i in range(len(sequence)-1):
+        if sequence[i] >= sequence[i+1]:
+            return False
+    return True
+        
 
-        elif counter <= 1 and idx == len(sequence) - 1:
-            return True
+print(almostIncreasingSequence(array_1))
 
-try_1 = almostIncreasingSequence(array_1)
-print(try_1)
 
     
