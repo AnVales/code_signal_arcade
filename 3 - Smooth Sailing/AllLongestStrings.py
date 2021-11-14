@@ -1,7 +1,5 @@
 # Given an array of strings, return another array containing all of its longest strings.
 
-inputArray = ['aba', 'aa', 'aba']
-
 def allLongestStrings(inputArray):
 
     prev_word_count = - float("inf")
@@ -18,5 +16,4 @@ def allLongestStrings(inputArray):
 
     return outputArray
 
-print(allLongestStrings(inputArray))
 
