@@ -17,11 +17,9 @@ def solution(a):
     team2 = 0
 
     for idx, val in enumerate(a):
-        print(idx)
 
         #par
         if idx % 2 == 0:
-            print(idx)
             team1 = team1 + val
 
         else:
