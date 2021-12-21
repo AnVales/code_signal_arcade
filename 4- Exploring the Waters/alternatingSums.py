@@ -5,12 +5,6 @@
 # Return an array of two integers, where the first element is the total weight of team 1, 
 # and the second element is the total weight of team 2 after the division is complete.
 
-a1 = [50, 60, 60, 45, 70]
-a2 = [100, 50]
-a3 = [80]
-a4 = [100, 50, 50, 100]
-a5 = [100, 51, 50, 100]
-
 def solution(a):
 
     team1 = 0
@@ -27,5 +21,3 @@ def solution(a):
 
     teams = [team1, team2]
     return teams
-
-print(solution(a1))
