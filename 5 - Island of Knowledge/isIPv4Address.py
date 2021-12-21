@@ -11,14 +11,12 @@
 # In other words, it's a string of four numbers each between 0 and 255 inclusive, with a "." character in between each number. 
 # All numbers should be present without leading zeros.
 
-inputString = "01.233.161.131"
-# ARREGLAR QUE NO ES VALIDO CON UN 0 DELANTE DE CUALQUIER COSA
-
 def solution(inputString):
 
     # Regrex 
     import re
-    pattern = '(\d+).(\d+).(\d+).(\d+)'
+    pattern = '(\d+)\.(\d+)\.(\d+)\.(\d+)'
+    pattern_0 = '0\d+'
     z = re.findall(pattern, inputString)
 
     # # Initialise variable
@@ -28,11 +26,10 @@ def solution(inputString):
     if re.fullmatch(pattern, inputString):
         z_list = list(z[0])
         for number in z_list:
-            if int(number) < 0 or int(number) > 255:
+            if int(number) < 0 or int(number) > 255 or re.fullmatch(pattern_0, number):
                 fits = False
+
     else:
         fits = False
 
     return fits
-
-print(solution(inputString))
