@@ -1,12 +1,13 @@
 # Check if all digits of the given integer are even.
 
-# def solution(n):
+def solution(n):
 
-n = 642386
-even = True
+    # Initialise variable
+    even = True
 
-for digit in str(n):
-    if  not int(digit) % 2 == 0:
-        even = False
+    # Check if there is a rest between 2
+    for digit in str(n):
+        if  not int(digit) % 2 == 0:
+            even = False
 
-print(even)
+    return even
