@@ -31,7 +31,5 @@ def isSorted(sequence):
     return True
         
 
-print(almostIncreasingSequence(array_1))
-
 
     
