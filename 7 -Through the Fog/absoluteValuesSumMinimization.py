@@ -7,20 +7,23 @@
 
 # If there are several possible answers, output the smallest one.
 
-a = [2, 4, 7]
+def solution(a):
 
+    # Initialise variables
+    menor_suma_valor = float("inf")
+    menor_suma_x = 0
 
-menor_suma_valor = float("inf")
-menor_suma_x = 0
+    # Subtraction
+    for restando in a:
+        suma_i = 0
 
-for restando in a:
-    suma_i = 0
+        for value in a:
+            suma_i = suma_i + abs(value - restando)
 
-    for value in a:
-        suma_i = suma_i + abs(value - restando)
+        # Save the lowest result
+        if menor_suma_valor > suma_i:
+            menor_suma_valor = suma_i
+            menor_suma_x = restando
 
-    if menor_suma_valor > suma_i:
-        menor_suma_valor = suma_i
-        menor_suma_x = restando
-print(menor_suma_x, menor_suma_valor)
+    return (menor_suma_x)
 
