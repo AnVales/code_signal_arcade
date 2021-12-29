@@ -6,12 +6,9 @@ def add(num, add_i):
 
 # Funcion suma los numeros 
 def each_add(array, idx, k, add_i):
-    add_i = add(array[idx], add_i)
-
-    # Si aun no ha sumado todos los numeros, sigue sumando
-    if k != 0:
-        add_i = each_add(array, idx - 1, k - 1, add_i)
-
+    # Suma el valor y los anteriores k valores
+    for i in range(k+1):
+        add_i = add(add_i, array[idx-i])
     return add_i
 
 # Funcion solucion, da la mayor suma de un numero de numeros k consecutivos de un array 
