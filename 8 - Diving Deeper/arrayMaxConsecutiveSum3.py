@@ -1,15 +1,16 @@
 # Given array of integers, find the maximal possible sum of some of its k consecutive elements.
 
+# Solution function, gives the largest sum of a number of consecutive k numbers in an array. 
 def solution(inputArray, k):
-    # Sumamos el primer conjunto
+    # Add the first set
     add_i = 0
     for i in range(k):
         add_i = add_i + inputArray[i]
 
-    # Solo guardamos el mayor numero
+    # only keep the highest value
     max_val = add_i
 
-    # Ahora vamos a sumar el siguiente y restar el anterior
+    # Now let's add the next one and subtract the previous one.
     for i in range(len(inputArray)-k):
         add_i = - inputArray[i] + add_i + inputArray[i+k]
 
