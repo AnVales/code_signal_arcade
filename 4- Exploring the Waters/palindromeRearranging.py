@@ -1,5 +1,6 @@
 # Given a string, find out if its characters can be rearranged to form a palindrome.
 
+# Solution function
 def solution(inputString):
 
     # Dictionary with the letters of the input string and a counter of letters

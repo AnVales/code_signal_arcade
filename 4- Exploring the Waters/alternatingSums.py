@@ -5,14 +5,17 @@
 # Return an array of two integers, where the first element is the total weight of team 1, 
 # and the second element is the total weight of team 2 after the division is complete.
 
+# Solution function
 def solution(a):
 
+    # Initialise variables
     team1 = 0
     team2 = 0
 
+    # Check if the index is odd or even and adds it
     for idx, val in enumerate(a):
 
-        #par
+        # even 
         if idx % 2 == 0:
             team1 = team1 + val
 
