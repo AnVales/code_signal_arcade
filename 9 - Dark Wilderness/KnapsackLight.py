@@ -5,16 +5,14 @@
 
 # Note that there are only two items and you can't bring more than one item of each type, i.e. you can't take two first items or two second items.
 
-value1 = 10 
-weight1 = 5
-value2 = 6
-weight2 = 4
-maxW = 8
-
+# Solution function
 def solution(value1, weight1, value2, weight2, maxW):
+
+    # Lists with weight and value information
     list_val = [value1, value2]
     list_we = [weight1, weight2]
 
+    # Calculate the value according to the incoming weight
     if list_we[0] + list_we[1] <= maxW:
         return(list_val[0]+list_val[1])
 
