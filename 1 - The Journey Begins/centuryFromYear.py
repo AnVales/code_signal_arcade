@@ -2,14 +2,17 @@
 # The first century spans from the year 1 up to and including the year 100,
 # the second - from the year 101 up to and including the year 200, etc.
 
+# Solution function
 def centuryFromYear(year):
 
+    # Initialise variables
     year_list = []
     century = 0
 
     for num in str(year):
         year_list.append(int(num))
 
+    # Gets the century according to the length of the year
     if 0 < len(year_list) <= 2:
         century = 1
         
