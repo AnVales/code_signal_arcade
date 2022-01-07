@@ -7,6 +7,7 @@
 
 # If there are several possible answers, output the smallest one.
 
+# Solution function
 def solution(a):
 
     # Initialise variables

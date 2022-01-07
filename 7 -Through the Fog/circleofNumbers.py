@@ -3,7 +3,10 @@
 
 # Given n and firstNumber, find the number which is written in the radially opposite position to firstNumber.
 
+# Solution function
 def solution(n, firstNumber):
+
+    # Determines half of the numbers and adds/subtracts it to the value
     if int((n/2)) + firstNumber <= n-1:
         return (int((n/2))+firstNumber)
     else:

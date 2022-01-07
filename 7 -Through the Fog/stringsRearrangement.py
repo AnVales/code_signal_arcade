@@ -4,44 +4,43 @@
 
 # Note: You're only rearranging the order of the strings, not the order of the letters within the strings!
 
-inputArray = ["aba", "aab", "aaa"]
-
+# Find couple function  
 def find_couple(word, inputArray, coupleArray):
-    # Comprobamos con cada palabra de la lista
+    # Check with all the words in the list
     for possible_couple in inputArray:
 
-        # Si la palabra no es la que estamos usando en la busqueda y no esta en la lista de parejas, a priori no hay diferencias
+        # There is no diff
+        # If the word is not the one that we are searching and is not in the couple list
         if possible_couple!=word and possible_couple not in coupleArray:
             dif = 0
             for letter in range(len(word)):
                 
-                # Si las letras son diferentes, hay diferencias
+                # There is a diff if a letter is diff
                 if possible_couple[letter]!=word[letter]:
                     dif = dif + 1
                     
-                # Si la diferencia es 1 y ya hemos mirado todas las letras nos quedamos con esa palabra como pareja, volvemos a buscar
+                # If the diff is 1 and we have check all the letters, this word is a couple, lets search again
                 if dif == 1 and letter == len(word) - 1:
                     coupleArray.append(possible_couple)
                     find_couple(possible_couple, inputArray, coupleArray)
 
-                # Si al final de las busquedas no tenemos una diferencia de 1 letra, se inicializa coupleArray
+                # If at the end of the searchs we dont have a one letter different, coupleArray is initialise
                 if dif != 1 and letter == len(word) - 1:
                     coupleArray = []
 
-                # Si llevamos ya el mismo numero de strings en la original que en el emparejado pues ya estaria y se puede
+                # If we have the same number of str in the original and in the couple array, its possible
                 if len(coupleArray) == len(inputArray):
                     return True
 
-# La funcion final que llama a la otra
+# Solution function
 def solution(inputArray):
-    # Recorremos el array para meterlo en la funcion de buscar parejas
+    # We traverse the array to put it into the match function
     for i in inputArray:
         coupleArray = [i]
         respuesta = find_couple(i, inputArray, coupleArray)
-        # Si la respuesta es que se puede ordenar, true
+        # If the answer can be ordered, true
         if respuesta:
             return respuesta
-    # Si no devolvemos true, pues da false
+
     return False
 
-print(solution(inputArray))
