@@ -1,5 +1,6 @@
 # Given a string, find the number of different characters in it.
 
+# Solution function
 def solution(s):
 
     # Initialise variable

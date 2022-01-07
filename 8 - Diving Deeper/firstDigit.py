@@ -1,5 +1,6 @@
 # Find the leftmost digit that occurs in a given string.
 
+# Solution function
 def solution(inputString):
     import re
 
