@@ -11,6 +11,7 @@
 # In other words, it's a string of four numbers each between 0 and 255 inclusive, with a "." character in between each number. 
 # All numbers should be present without leading zeros.
 
+# Solution function
 def solution(inputString):
 
     # Regrex 
@@ -19,7 +20,7 @@ def solution(inputString):
     pattern_0 = '0\d+'
     z = re.findall(pattern, inputString)
 
-    # # Initialise variable
+    # Initialise variable
     fits = True 
 
     # Check address

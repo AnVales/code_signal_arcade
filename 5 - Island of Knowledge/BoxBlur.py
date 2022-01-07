@@ -10,6 +10,7 @@
 
 # Return the blurred image as an integer, with the fractions rounded down.
 
+# Solution function
 def solution(image):         
 
     # Import 

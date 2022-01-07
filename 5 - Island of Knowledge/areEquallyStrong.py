@@ -5,7 +5,10 @@
 
 # Given your and your friend's arms' lifting capabilities find out if you two are equally strong.
 
+# Solution function
 def solution(yourLeft, yourRight, friendsLeft, friendsRight):
+
+    # Make a sorted list with arms
     your_arms = [yourLeft, yourRight]
     your_arms = sorted(your_arms)
 

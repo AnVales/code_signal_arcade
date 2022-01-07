@@ -5,6 +5,7 @@
 
 # Find the minimal length of the jump enough to avoid all the obstacles.
 
+# Solution function
 def solution(inputArray):
 
     # A list of all the numbers from 2 to 1000

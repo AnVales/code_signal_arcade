@@ -2,6 +2,7 @@
 # and those cells that don't contain a mine have a number in it that indicates the total number of mines in the neighboring cells. 
 # Starting off with some arrangement of mines we want to create a Minesweeper game setup.
 
+# Solution function
 def solution(matrix):
     import numpy as np
 
@@ -9,6 +10,7 @@ def solution(matrix):
     final_dim = [len(matrix), len(matrix[0])]
     mines_array = []
 
+    # Traverses the array
     for i in range(len(matrix)):
         for j in range(len(matrix[0])):
 
