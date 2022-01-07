@@ -1,8 +1,9 @@
 # Given two strings, find the number of common characters between them.
 
+# Solution function
 def solution(s1, s2):
 
-    # Contar letras por string y guardar en diccionario
+    # Count letters by string and store in dictionary
     def make_dict(string):
         dict = {}
 
@@ -12,11 +13,11 @@ def solution(s1, s2):
 
         return dict
         
-    # Hacer el diccionario
+    # Obtain the dictionary
     dict_s1 = make_dict(s1)
     dict_s2 = make_dict(s2)
     
-    # Obtener letras en común
+    # Obtain the common letters
     common_letters = 0
 
     for key in dict_s1:

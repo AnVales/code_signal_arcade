@@ -4,14 +4,16 @@
 
 import re
 
+# Solution function
 def solution(inputString): 
-    # Patron que buscamos -> (letras)
+
+    # Pattern -> (letters)
     pattern = '(\([a-z]*\))'
 
-    # Si hay patron:
+    # If it finds the patters:
     if re.findall(pattern, inputString):
         
-        # Reemplaza por el inverso sin patron
+        # Replace with the reverse without () the pattern
         for i in re.findall(pattern, inputString):
             inputString = inputString.replace(i, i[1:-1][::-1])
         return solution(inputString)

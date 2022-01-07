@@ -1,10 +1,13 @@
 # Given two strings, find the number of common characters between them.
 
+# Solution funcion
 def solution(s1, s2):
 
+    # Initialise variables
     used_letters = []
     common_letters = 0
 
+    # Save the letters that are common 
     for letter in s1:
         if letter in s2 and letter not in used_letters:
             used_letters.append(letter)
