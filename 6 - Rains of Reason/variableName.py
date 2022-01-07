@@ -2,6 +2,7 @@
 
 # Check if the given string is a correct variable name.
 
+# Solution function
 def solution(name):
 
     # Make a list of characters

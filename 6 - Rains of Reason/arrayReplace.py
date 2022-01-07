@@ -1,5 +1,6 @@
 # Given an array of integers, replace all the occurrences of elemToReplace with substitutionElem.
 
+# Solution function
 def solution(inputArray, elemToReplace, substitutionElem):
 
     # If the elem is in inputArray, replace

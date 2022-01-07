@@ -1,5 +1,6 @@
 # Given two cells on the standard chess board, determine whether they have the same color or not.
 
+# Solution function
 def solution(cell1, cell2):
     # Chess
     letter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
