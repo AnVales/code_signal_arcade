@@ -6,9 +6,6 @@
 #The winner of the election must secure strictly more votes than any other candidate. 
 # If two or more candidates receive the same (maximum) number of votes, assume there is no winner at all.
 
-votes = [2, 3, 5, 2]
-k = 3
-
 def solution(votes, k):
 
     # Parameter initialization
@@ -38,6 +35,3 @@ def solution(votes, k):
             winner = winner + 1
 
     return winner
-
-
-print(solution(votes, k))
