@@ -5,12 +5,9 @@
 # so he needs a program that sums up all the numbers which appear in the given input.
 
 # Help Ratiorg by writing a function that returns the sum of numbers that appear in the given inputString.
-
-inputstring = "12 apples, 4 oranges"
-
 import re 
 
-def solution(inputString):
+def solution(inputstring):
     numbers = re.findall(r'[0-9]+', inputstring)
 
     # Addition function: add all the values of the array
@@ -25,5 +22,3 @@ def solution(inputString):
         return(sum) 
 
     return(addition(numbers))   
-
-print(solution(inputstring))

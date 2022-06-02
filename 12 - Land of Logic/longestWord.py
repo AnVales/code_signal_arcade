@@ -7,5 +7,3 @@ def solution(text):
     # Make a list of words and return the longest one
     return(max(re.findall(r'[a-zA-Z]+', text), key=len))
 
-    
-
