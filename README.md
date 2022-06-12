@@ -1,2 +1,1 @@
-# code_signal_arcade
-Folder with some code signal arcade levels.
+Folder with all the levels of Code Signal Arcade intro solved with Python.
